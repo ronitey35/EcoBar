@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  @layer base {
+    h1 {
+      @apply scroll-m-20 text-4xl font-semibold tracking-wide lg:text-5xl;
+    }
+  
+    h2 {
+      @apply scroll-m-20 text-3xl font-semibold tracking-tight lg:text-4xl;
+    }
+  
+    h3 {
+      @apply scroll-m-20 text-2xl font-semibold tracking-tight lg:text-3xl;
+    }
+  
+    h4 {
+      @apply scroll-m-20 text-xl font-semibold tracking-tight lg:text-2xl;
+    }
+  
+    h5 {
+      @apply scroll-m-20 text-lg font-semibold tracking-tight lg:text-xl;
+    }
+  
+    h6 {
+      @apply scroll-m-20 font-semibold tracking-tight lg:text-lg;
+    }
+   
+  }
+  
+  @layer utilities {
+    .max-width {
+      @apply mx-auto max-w-[1280px];
+    }
+  
+    .custom-transition {
+      @apply transition-all duration-300;
+    }
+  
+    /* margin and padding */
+    .section-padding-x {
+      @apply px-5 sm:px-8 md:px-12 lg:px-16 xl:px-20;
+    }
+  
+    .section-padding-y {
+      @apply py-10 lg:py-16 xl:py-20;
+    }
+  
+    .section-margin-y {
+      @apply my-10 lg:my-16 xl:my-20;
+    }
+  }
