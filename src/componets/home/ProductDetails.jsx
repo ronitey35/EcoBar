@@ -81,7 +81,7 @@ const ProductsDetails = () => {
       : productsData.filter((product) => product.category === activeCategory);
 
   return (
-    <div className="max-width mx-auto px-6 py-10">
+    <div className="max-width section-padding-x ">
       <h1 className="text-4xl font-bold text-center mb-8">Introducing Our Products</h1>
 
       <div className="flex justify-center mb-8">
