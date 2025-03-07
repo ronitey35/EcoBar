@@ -70,7 +70,7 @@ const productsData = [
   },
 ];
 
-const categories = ["All", "Vegetables", "Fruit", "Meat & Fish", "View All"];
+const categories = ["All", "Vegetables", "Fruit", "Meat & Fish"];
 
 const ProductsDetails = () => {
   const [activeCategory, setActiveCategory] = useState("All");
