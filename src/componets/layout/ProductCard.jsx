@@ -1,6 +1,11 @@
 import { Heart, ShoppingCart } from "lucide-react";
+import useCartStore from "../../store/use-cart-store";
 
 const ProductCard = ({ product }) => {
+
+
+const {addToCart} = useCartStore()
+
   return (
     <div className="relative bg-white shadow-lg rounded-2xl overflow-hidden p-4 border border-gray-200 hover:shadow-xl transition-all">
       {product.tag && (
@@ -9,7 +14,7 @@ const ProductCard = ({ product }) => {
         </span>
       )}
       <div className="flex justify-center items-center h-40">
-        <img src={ `/products/${product.image}` } alt={product.name} className="h-full w-auto object-contain" />
+        <img src={`/products/${product.image}`} alt={product.name} className="h-full w-auto object-contain" />
       </div>
       <div className="mt-4">
         <h3 className="text-lg font-semibold text-gray-800">{product.name}</h3>
@@ -20,7 +25,10 @@ const ProductCard = ({ product }) => {
           )}
         </div>
         <div className="flex justify-between items-center mt-3">
-          <button className="bg-green-500 text-white px-4 py-2 rounded-full flex items-center space-x-1 hover:bg-green-600 transition">
+          <button
+            onClick={()=> addToCart(product)}
+            className="bg-green-500 text-white px-4 py-2 rounded-full flex items-center space-x-1 hover:bg-green-600 transition"
+          >
             <ShoppingCart size={16} />
           </button>
           <button className="text-gray-500 hover:text-red-500 transition">

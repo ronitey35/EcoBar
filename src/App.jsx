@@ -1,9 +1,11 @@
 import Features from "./componets/home/Features";
 import FlashSales from "./componets/home/FlashSales";
 import Hero from "./componets/home/Hero";
+import LatestNews from "./componets/home/LatestNews";
 import ProductsDetails from "./componets/home/ProductDetails";
 import Testimonials from "./componets/home/Testimonials";
-import Navbar from "./componets/Navbar";
+import Footer from "./componets/layout/Footer";
+import Navbar from "./componets/layout/Navbar";
 
 
 
@@ -12,8 +14,6 @@ function App() {
 
     <>
     <Navbar/>
-
-    
     <div className="section-margin-y">
     <Hero/>
       </div>
@@ -25,19 +25,21 @@ function App() {
       <Features/>
       </div>
 
-      <div className="section-margin-y">
+      <div className="section-margin-y ">
       <FlashSales/>
       </div>
 
       <div className="section-margin-y">
       <Testimonials/>
-      </div>
+      </div> 
 
-      
-  
- 
- 
- 
+     
+     
+      <div className="section-margin-y">
+      <LatestNews/>
+      </div> 
+     
+     <Footer/>
     </>
 
   );

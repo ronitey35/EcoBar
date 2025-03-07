@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react"
 import { ArrowRight } from "lucide-react"
 
-const endTime = new Date("2025-03-04T15:59:59").getTime()
+const endTime = new Date("2025-04-04T15:59:59").getTime()
 
 const FlashSales = () => {
   const [timeLeft, setTimeLeft] = useState(endTime - Date.now())
@@ -21,7 +21,7 @@ const FlashSales = () => {
   const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24))
 
   return (
-    <div className="bg-[#f5f9f5]  section-padding-x ">
+    <div className="bg-[#f5f9f5]  section-padding-x  section-padding-y">
       <div className="max-width">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8 relative">
           {/* Left side image */}
