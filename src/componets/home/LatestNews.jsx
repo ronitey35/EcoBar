@@ -6,7 +6,7 @@ export default function LatestNews() {
     {
       id: 1,
       image: "/home/latest-news/image-3.png",
-      date: "23",
+      date: "22",
       title: "Curabitur porttitor orci eget neque accumsan venenatis.",
       description:
         "Nulla felis lorem, venenatis pharetra libero et, lacinia aliquet tortor. Mauris consectetur nulla quis pulvinar porttitor. In porttitor eu risus.",
@@ -14,7 +14,7 @@ export default function LatestNews() {
     {
       id: 2,
       image: "/home/latest-news/image-2.png",
-      date: "23",
+      date: "29",
       title: "Curabitur porttitor orci eget neque accumsan venenatis.",
       description:
         "Nulla felis lorem, venenatis pharetra libero et, lacinia aliquet tortor. Mauris consectetur nulla quis pulvinar porttitor. In porttitor eu risus.",
@@ -22,7 +22,7 @@ export default function LatestNews() {
     {
       id: 3,
       image: "/home/latest-news/image-3.png",
-      date: "23",
+      date: "08",
       title: "Curabitur porttitor orci eget neque accumsan venenatis.",
       description:
         "Nulla felis lorem, venenatis pharetra libero et, lacinia aliquet tortor. Mauris consectetur nulla quis pulvinar porttitor. In porttitor eu risus.",
