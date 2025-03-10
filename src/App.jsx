@@ -1,46 +1,41 @@
-import Features from "./componets/home/Features";
-import FlashSales from "./componets/home/FlashSales";
-import Hero from "./componets/home/Hero";
-import LatestNews from "./componets/home/LatestNews";
-import ProductsDetails from "./componets/home/ProductDetails";
-import Testimonials from "./componets/home/Testimonials";
+import { Route, Routes } from "react-router-dom";
 import Footer from "./componets/layout/Footer";
 import Navbar from "./componets/layout/Navbar";
+import About from "./componets/pages/About";
+import Contact from "./componets/pages/Contact";
+import SignIn from "./componets/pages/SignIn";
+import SignUp from "./componets/pages/SignUp";
+import Products from "./componets/pages/Products";
+import Home from "./Home";
+import NotFound from "./componets/layout/NotFound";
+
 
 
 
 function App() {
   return (
 
-    <>
-    <Navbar/>
-    <div className="section-margin-y">
-    <Hero/>
-      </div>
-      <div className="section-margin-y">
-      <ProductsDetails />
-      </div>
+  <>
+  <Navbar/>
+  <main>
 
-      <div className="section-margin-y">
-      <Features/>
-      </div>
+<Routes>
 
-      <div className="section-margin-y ">
-      <FlashSales/>
-      </div>
+<Route  path="/" element={<Home />} />
+<Route  path="/about" element={<About />} />
+<Route  path="/contact" element={<Contact/>} />
+<Route  path="/signin" element={<SignIn/>} />
+<Route  path="/signup" element={<SignUp/>} />
+<Route  path="/product" element={<Products/>} />
+<Route  path="*" element={<NotFound/>} />
+</Routes>
 
-      <div className="section-margin-y">
-      <Testimonials/>
-      </div> 
+  </main>
 
-     
-     
-      <div className="section-margin-y">
-      <LatestNews/>
-      </div> 
-     
-     <Footer/>
-    </>
+
+
+  <Footer/>
+  </>
 
   );
 }

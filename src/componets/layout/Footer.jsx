@@ -3,8 +3,8 @@ import FooterColumn from "./FooterLinks"
 
 export default function Footer() {
   const aboutLinks = [
-    { id: 1, label: "About Us", href: "#" },
-    { id: 2, label: "Contact", href: "#" },
+    { id: 1, label: "About Us", href: "/about" },
+    { id: 2, label: "Contact", href: "/contact" },
     { id: 3, label: "Shipping Info", href: "#" },
   ]
 
