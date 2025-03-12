@@ -14,7 +14,7 @@ const {addToCart} = useCartStore()
         </span>
       )}
       <div className="flex justify-center items-center h-40">
-        <img src={`/products/${product.image}`} alt={product.name} className="h-full w-auto object-contain" />
+        <img src={`${product.image}`} alt={product.name} className="h-full w-auto object-contain" />
       </div>
       <div className="mt-4">
         <h3 className="text-lg font-semibold text-gray-800">{product.name}</h3>
