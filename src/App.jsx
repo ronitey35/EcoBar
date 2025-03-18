@@ -17,7 +17,7 @@ function App() {
 
   <>
   <Navbar/>
-  <main>
+  <main className="">
 
 <Routes>
 
