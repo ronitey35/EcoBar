@@ -1,6 +1,5 @@
 import { Route, Routes } from "react-router-dom";
 import Home from "./Home";
-import Contact from "./componets/pages/contact";
 import SignIn from "./componets/pages/sign-in";
 import SignUp from "./componets/pages/sign-up";
 import Blogs from "./componets/pages/blogs";
@@ -9,6 +8,7 @@ import NotFound from "./componets/layout/not-found";
 import Navbar from "./componets/layout/navbar";
 import Footer from "./componets/layout/Footer";
 import About from "./componets/pages/About";
+import Contact from "./componets/pages/contact";
 
 
 
