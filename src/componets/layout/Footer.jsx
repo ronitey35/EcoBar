@@ -1,5 +1,5 @@
 import { FacebookIcon, Instagram, LinkedinIcon, TwitterIcon } from "lucide-react"
-import FooterColumn from "./FooterLinks"
+import FooterColumn from "./footer-column"
 
 export default function Footer() {
   const aboutLinks = [

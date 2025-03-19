@@ -1,14 +1,14 @@
 import { Route, Routes } from "react-router-dom";
-import Footer from "./componets/layout/Footer";
-import Navbar from "./componets/layout/Navbar";
-import About from "./componets/pages/About";
-import Contact from "./componets/pages/Contact";
-import SignIn from "./componets/pages/SignIn";
-import SignUp from "./componets/pages/SignUp";
-import Products from "./componets/pages/Products";
 import Home from "./Home";
-import NotFound from "./componets/layout/NotFound";
-
+import Contact from "./componets/pages/contact";
+import SignIn from "./componets/pages/sign-in";
+import SignUp from "./componets/pages/sign-up";
+import Blogs from "./componets/pages/blogs";
+import Products from "./componets/pages/products";
+import NotFound from "./componets/layout/not-found";
+import Navbar from "./componets/layout/navbar";
+import Footer from "./componets/layout/Footer";
+import About from "./componets/pages/About";
 
 
 
@@ -24,8 +24,9 @@ function App() {
 <Route  path="/" element={<Home />} />
 <Route  path="/about" element={<About />} />
 <Route  path="/contact" element={<Contact/>} />
-<Route  path="/signin" element={<SignIn/>} />
-<Route  path="/signup" element={<SignUp/>} />
+<Route  path="/sign-in" element={<SignIn/>} />
+<Route  path="/sign-up" element={<SignUp/>} />
+<Route  path="/blogs" element={<Blogs/>} />
 <Route  path="/products" element={<Products/>} />
 <Route  path="*" element={<NotFound/>} />
 </Routes>

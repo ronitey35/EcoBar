@@ -1,4 +1,4 @@
-export default function BlogCard({ post }) {
+export default function NewsCard({ post }) {
     return (
       <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
         <div className="relative">

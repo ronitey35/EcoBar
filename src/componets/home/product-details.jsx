@@ -1,6 +1,6 @@
 import { useState } from "react";
-import ProductCard from "../layout/ProductCard";
 import { useProducts } from "../../queries/use-product";
+import ProductCard from "../layout/product-card";
 
 
 const categories = ["All", "Vegetables", "Fruit", "Meat & Fish"];

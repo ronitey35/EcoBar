@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { useProducts } from "../../queries/use-product";
 import { ShoppingCart, Star } from "lucide-react";
-import ProductCard from "../layout/ProductCard";
+import ProductCard from "../layout/product-card";
 import { Range } from "react-range";
 
 const categories = [

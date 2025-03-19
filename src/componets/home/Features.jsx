@@ -1,4 +1,4 @@
-import FeatureCard from "../layout/FeatureCard";
+import FeatureCard from "../layout/feature-card";
 
 const featuresData = [
   {

@@ -1,4 +1,4 @@
-import BlogCard from "../layout/BlogCard"
+import NewsCard from "../layout/news-card"
 
 
 export default function LatestNews() {
@@ -35,7 +35,7 @@ export default function LatestNews() {
         <h2 className="text-3xl font-bold text-center text-green-800 mb-8">Latest News</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {blogPosts.map((post) => (
-            <BlogCard key={post.id} post={post} />
+            <NewsCard key={post.id} post={post} />
           ))}
         </div>
       </div>

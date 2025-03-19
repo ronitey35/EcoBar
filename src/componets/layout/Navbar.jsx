@@ -12,9 +12,9 @@ import useCartStore from "../../store/use-cart-store";
 
 const navLinks = [
   { href: "/", label: "Home" },
-  { href: "/shop", label: "Shop" },
-  { href: "/pages", label: "Pages" },
-  { href: "/blog", label: "Blog" },
+  { href: "/products", label: "Shop" },
+  
+  { href: "/blogs", label: "Blogs" },
   { href: "/about", label: "About Us" },
   { href: "/contact", label: "Contact Us" },
 ];
@@ -56,14 +56,19 @@ const Navbar = () => {
       <div className=" section-padding-x  hidden max-width w-full items-center justify-between bg-zinc-900 px-4 py-2 text-sm text-white md:flex">
         <div className="flex items-center gap-2">
           <HiOutlineMapPin className="h-4 w-4" />
-          <span>Store Location: Lincoln - 344, Illinois, Chicago, USA</span>
+          <span>Store Location: Bharatpur - 10, Bypass Road, Bishal Chowk, chitwan</span>
         </div>
         <div className="flex items-center gap-4">
           <Dropdown options={["English", "Spanish", "French"]} value={language} onChange={setLanguage} />
           <Dropdown options={["USD", "EUR", "GBP"]} value={currency} onChange={setCurrency} />
           <div className="h-4 w-px bg-white/20" />
           <a href="/sign-in" className="hover:text-gray-200 hover:underline">
-            Sign In / Sign Up
+            Sign In 
+            
+          </a> 
+          <div className="h-4 w-[1px] bg-white"/>
+          <a href="/sign-up" className="hover:text-gray-200 hover:underline">
+            Sign Up
           </a>
         </div>
       </div>

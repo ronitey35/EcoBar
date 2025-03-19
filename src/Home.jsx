@@ -1,10 +1,9 @@
 import Features from "./componets/home/Features";
-import FlashSales from "./componets/home/FlashSales";
+import FlashSales from "./componets/home/flash-sales";
 import Hero from "./componets/home/Hero";
-import LatestNews from "./componets/home/LatestNews";
-import ProductsDetails from "./componets/home/ProductDetails";
+import LatestNews from "./componets/home/latest-news";
+import ProductsDetails from "./componets/home/product-details";
 import Testimonials from "./componets/home/Testimonials";
-
 
 
 
