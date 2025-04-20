@@ -5,12 +5,16 @@ import App from './App.jsx'
 import { BrowserRouter } from 'react-router-dom'
 import { QueryProvider } from './providers/query-provider.jsx'
 
+
 createRoot(document.getElementById('root')).render(
   <StrictMode>
 
     <BrowserRouter>
     <QueryProvider>
-    <App />
+    
+      <App />
+     
+    
     </QueryProvider>
 
     </BrowserRouter>

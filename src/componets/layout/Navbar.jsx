@@ -19,15 +19,6 @@ const navLinks = [
   { href: "/contact", label: "Contact Us" },
 ];
 
-const iconButtons = [
-  { icon: <HiOutlineHeart className="h-6 w-6" />, link: "#" },
-  {
-    icon: <HiOutlineShoppingCart className="h-6 w-6" />,
-    link: "#",
-    badge: 2,
-  },
-];
-
 const Dropdown = ({ options, value, onChange }) => (
   <select
     className="bg-transparent text-white hover:text-gray-200"
@@ -46,6 +37,7 @@ const Navbar = () => {
   const [language, setLanguage] = useState("English");
   const [currency, setCurrency] = useState("USD");
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+ 
 
   const { getTotalItems } = useCartStore()
   const totalCartItems = getTotalItems()
@@ -92,16 +84,22 @@ const Navbar = () => {
             </div>
           </div>
           <div className="flex items-center gap-4">
-            {iconButtons.map(({ icon, link, badge }, index) => (
-              <a key={index} href={link} className="relative p-2 hover:text-green-600">
-                {icon}
-                {badge && (
-                  <span className="absolute -right-1 -top-1 flex h-5 w-5 items-center justify-center rounded-full bg-green-600 text-xs text-white">
-                    {totalCartItems}
-                  </span>
-                )}
-              </a>
-            ))}
+            {/* heart-icon */}
+            <div className="relative p-2 hover:text-green-600">
+              <HiOutlineHeart className="h-6 w-6" />
+            </div>
+            {/* cart-icon */}
+            <div
+              className="relative p-2 hover:text-green-600 cursor-pointer"
+       
+            >
+              <HiOutlineShoppingCart className="h-6 w-6" />
+              {totalCartItems > 0 && (
+                <span className="absolute -right-1 -top-1 flex h-5 w-5 items-center justify-center rounded-full bg-green-600 text-xs text-white">
+                  {totalCartItems}
+                </span>
+              )}
+            </div>
           </div>
         </div>
       </div>
@@ -138,6 +136,9 @@ const Navbar = () => {
           </div>
         </div>
       )}
+
+
+     
     </header>
   );
 };
