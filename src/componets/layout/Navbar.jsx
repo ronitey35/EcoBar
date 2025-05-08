@@ -6,9 +6,11 @@ import {
   HiOutlinePhone,
   HiOutlineMapPin,
   HiOutlineBars3,
+  HiOutlineXCircle,
 } from "react-icons/hi2";
 import { IoLeafOutline } from "react-icons/io5";
 import useCartStore from "../../store/use-cart-store";
+import CartItems from "./cart-items";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -37,6 +39,7 @@ const Navbar = () => {
   const [language, setLanguage] = useState("English");
   const [currency, setCurrency] = useState("USD");
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isCartOpen, setIsCartOpen] = useState(false);
  
 
   const { getTotalItems } = useCartStore()
@@ -91,7 +94,7 @@ const Navbar = () => {
             {/* cart-icon */}
             <div
               className="relative p-2 hover:text-green-600 cursor-pointer"
-       
+               onClick={() => setIsCartOpen(true)}
             >
               <HiOutlineShoppingCart className="h-6 w-6" />
               {totalCartItems > 0 && (
@@ -138,7 +141,34 @@ const Navbar = () => {
       )}
 
 
-     
+      {/* cart drawer   */}
+
+      <div
+  className={`fixed inset-0 z-50 flex justify-end bg-black bg-opacity-50 transition-opacity duration-300 ${
+    isCartOpen ? "opacity-100" : "opacity-0 pointer-events-none"
+  }`}
+  onClick={() => setIsCartOpen(false)}
+>
+  <div
+    className={`w-80 h-full bg-white p-4 shadow-xl transform overflow-y-scroll transition-transform duration-300 ${
+      isCartOpen ? "translate-x-0" : "translate-x-full"
+    }`}
+    onClick={(e) => e.stopPropagation()}
+  >
+    <div className="flex justify-between items-center border-b pb-2">
+      <h2 className="text-lg font-semibold">Shopping Cart</h2>
+      <HiOutlineXCircle className="h-6 w-6 cursor-pointer" onClick={() => setIsCartOpen(false)} />
+    </div>
+    <p className="mt-4">
+           
+    {totalCartItems > 0 ? <CartItems /> : "No Items in the cart"}
+
+    </p>
+  </div>
+</div>
+ 
+
+
     </header>
   );
 };
