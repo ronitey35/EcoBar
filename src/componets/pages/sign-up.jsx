@@ -125,6 +125,7 @@ export default function SignUp() {
         <p className="mt-6 text-center text-sm text-gray-600">
           Already have an account? <a href="/" className="font-medium text-blue-600 hover:text-blue-500">Login</a>
         </p>
+        <p>hello, this is a test</p>
       </div>
     </div>
   );
